@@ -25,17 +25,17 @@ class EasyBrokerAPI
       data = JSON.parse(response.body)
       properties = data["content"]
       if properties.nil? || properties.empty?
-        "No found properties"
+        "No found properties."
       else
         properties.map { |property| property["title"] }
-        #puts "Properties found"
+        #puts "Propiedades encontradas:"
         #properties.each_with_index do |property, index|
           #puts "#{index + 1}. #{property['title']}"
         #end
-        #puts "End List."
+        #puts "Final de la lista de propiedades."
       end
     else
-      raise "Error gets properties: #{response.code} - #{response.message}"
+      raise "Error for gets properties: #{response.code} - #{response.message}"
     end
   end
 end

@@ -37,7 +37,7 @@ RSpec.describe EasyBrokerAPI do
         allow(http_client).to receive(:use_ssl=).with(true)
         allow(http_client).to receive(:request).and_return(response)
 
-        expect { api.fetch_properties }.to raise_error("Error al obtener propiedades: 500 - Internal Server Error")
+        expect { api.fetch_properties }.to raise_error("Error for gets properties: 500 - Internal Server Error")
       end
     end
 
