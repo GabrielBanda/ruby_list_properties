@@ -50,7 +50,7 @@ RSpec.describe EasyBrokerAPI do
         allow(http_client).to receive(:request).and_return(response)
 
         result = api.fetch_properties
-        expect(result).to eq("No se encontraron propiedades.")
+        expect(result).to eq("No found properties.")
       end
     end
   end
